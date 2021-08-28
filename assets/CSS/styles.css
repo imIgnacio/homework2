@@ -1,7 +1,15 @@
+:root {
+    --border-color: #ffdab9;
+}
+
 body {
     background-color: #92A8D1;
     color: black;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 header {
@@ -17,6 +25,7 @@ h1 {
     display: inline-block;
     align-items: center;
     font-size: 200%;
+    margin-left: 15px;
 }
 
 .nav-content {
@@ -27,17 +36,74 @@ h1 {
 .nav-content > li {
     margin: 0 10px;
     font-size: 1.25rem;
+    list-style: none;
+    font-weight: bold;
 }
+
+.about-me {
+    display:block;
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+}
+
+h2 {
+    font-size: 175%;
+    padding-bottom: 10px;
+}
+
+hr {
+    border: 1px solid var(--border-color);
+}
+
+#about-me-description {
+    text-align: justify;
+    padding-top: 15px;
+}
+
 
 .card-distribution {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .card {
     height: 400px;
     width: 400px;
-    border: 3px solid peachpuff;
+    border: 3px solid var(--border-color);
     flex: 0 1 400px;
+}
+
+h3 {
+    font-size: 150%;
+    display: inline-block;
+    margin-top: 100px;
+    background-color: peru;
+    padding: 20px 20px 20px 0;
+}
+
+footer {
+    background-color: peru;
+    margin: 10px 20px;
+    display: flex;
+    justify-content: center;
+    font-size: large;
+}
+
+h4 {
+    font-size: 150%;
+}
+
+.footer-ul {
+    display:flex;
+    align-items: flex-end;
+    list-style: none;
+}
+
+.footer-ul > li {
+    margin: 20px 10px;
+    font-size: 16px;
+    list-style: none;
+    font-weight: bold;
 }
