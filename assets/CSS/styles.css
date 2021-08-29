@@ -49,16 +49,19 @@ h1 {
 
 /* UL that contains all linkers to different sections */
 .nav-content {
-    display:flex;
     list-style: none;
 }
 
 /* Linkers themselves */
 .nav-content > li {
-    margin: 0 50px 0 10px;
-    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
     list-style: none;
     font-weight: bold;
+    align-items: center;
+    margin-right: 45px;
+    margin-top: 10px;
 }
 
 /* Photo underneath header */
@@ -128,8 +131,8 @@ hr {
     border: 5px solid var(--border-color);
     border-radius: 20px;
     flex: 0 1 400px;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
 }
 
 /* Headings inside cards, title to information after clicking the card */
@@ -193,17 +196,32 @@ h4 {
 
 /* To display the web page according to screen size */
 @media screen and (min-width: 668px) {
+
+    .nav-content {
+        display:flex;
+        justify-content: space-evenly;
+        margin-right: 5%;
+        list-style: none;
+    }
+
+    .card {
+        height: 400px;
+        width: 400px;
+        flex: 1 1 400px;
+    }
     
-    .footer-container {
+    .nav-content {
         width: 100%;
-        flex: 1 1 auto;
-        align-items: center;
     }
 }
 
 @media screen and (min-width: 992px) {
     header, .card-distribution, .footer-container {
         flex-direction: row;
+    }
+
+    .nav-content {
+        margin-right: 100px;
     }
 
     .footer-container > h4 {
