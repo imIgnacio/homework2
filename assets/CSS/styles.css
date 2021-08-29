@@ -182,7 +182,7 @@ h4 {
 .footer-ul {
     display:flex;
     justify-content: space-around;
-    margin-right: 5%;
+    margin-right: 10%;
     list-style: none;
     flex: 1 1 auto;
 }
@@ -194,7 +194,8 @@ h4 {
     font-weight: bold;
 }
 
-/* To display the web page according to screen size */
+/* To display the web page according to screen size, note that page is made for mobile devices fisrt*/
+/* 668px for tablets */
 @media screen and (min-width: 668px) {
 
     .nav-content {
@@ -215,6 +216,7 @@ h4 {
     }
 }
 
+/* 992px for desktop and laptops */
 @media screen and (min-width: 992px) {
     header, .card-distribution, .footer-container {
         flex-direction: row;
