@@ -9,7 +9,13 @@ body {
 }
 
 a {
+    color: black;
     text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
 }
 
 header {
@@ -66,21 +72,50 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    flex-direction: row;
+}
+
+#card-html {
+    background: url('https://videohive.img.customer.envatousercontent.com/files/edf58567-0c1d-412c-9df8-c58505a7114f/inline_image_preview.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=d3246af46de46ab85e1579240ce7656f');
+    background-size: cover;
+    background-position: left;
+}
+
+#card-java {
+    background: url('https://marvel-b1-cdn.bc0a.com/f00000000156946/www.jrebel.com/sites/rebel/files/image/2021-03/2021%20java%20technology%20report.jpeg');
+    background-size: cover;
+}
+
+#card-github {
+    background: url('https://miro.medium.com/max/1024/1*wzEf4qVNT7mUeMIeQWTJbg.jpeg');
+    background-size: cover;
+    background-position: center;
 }
 
 .card {
+    border: 5px solid var(--border-color);
+    border-radius: 20px;
+    flex: 0 1 400px;
     height: 400px;
     width: 400px;
-    border: 3px solid var(--border-color);
-    flex: 0 1 400px;
+}
+
+.card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    margin-top: -48%;
 }
 
 h3 {
+    color: black;
     font-size: 150%;
     display: inline-block;
     margin-top: 100px;
     background-color: peru;
-    padding: 20px 20px 20px 0;
+    padding: 15px 20px 15px 20px;
+    border-radius: 10px;
 }
 
 footer {
@@ -107,3 +142,37 @@ h4 {
     list-style: none;
     font-weight: bold;
 }
+
+a:focus > .card{
+    background-color: greenyellow;
+    transform: scale(1.20);
+    box-shadow: inset 0px 0px 40px grey;
+}
+
+a:focus > .card > h3 {
+    box-shadow: inset 0px 0px 40px var(--border-color);
+}
+
+/*
+@media screen and (min-width: 768px) {
+    .card {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    .card-column:last-child {
+      flex-grow: 1;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    header {
+      width: 75%;
+    }
+  
+    .card-column {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+  }
+  */
