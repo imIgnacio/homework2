@@ -2,7 +2,7 @@
     --border-color: #ffdab9;
     --inside-bg-color: #cd853f;
 }
-
+/* General styling, which affetcs globally */
 body {
     background-color: #92A8D1;
     color: black;
@@ -19,6 +19,12 @@ img {
     height: 100%;
 }
 
+li:hover {
+    box-shadow: inset 0px 0px 40px var(--border-color);
+    border-radius: 10px;
+}
+
+/* Header styling, made for phones first */
 header {
     width: 100%;
     display: flex;
@@ -28,6 +34,7 @@ header {
     flex-direction: column;
 }
 
+/* Header H1, my name */
 h1 {
     display: inline-block;
     align-items: center;
@@ -40,18 +47,21 @@ h1 {
     box-shadow: inset 0 0 15px var(--inside-bg-color);
 }
 
+/* UL that contains all linkers to different sections */
 .nav-content {
     display:flex;
     list-style: none;
 }
 
+/* Linkers themselves */
 .nav-content > li {
-    margin: 0 50px 0 0;
+    margin: 0 50px 0 10px;
     font-size: 1.25rem;
     list-style: none;
     font-weight: bold;
 }
 
+/* Photo underneath header */
 .subtitle-div {
     display: block;
     height: 150px;
@@ -61,6 +71,7 @@ h1 {
     filter:brightness(60%)
 }
 
+/* About me section, H2 and brief description about myself */
 .about-me {
     display:block;
     width: 80%;
@@ -74,16 +85,18 @@ h2 {
     padding-bottom: 10px;
 }
 
+/* Line between h2 and paragraph */
 hr {
     border: 1px solid var(--border-color);
 }
 
+/* About me paragraph */
 #about-me-description {
     text-align: justify;
-    padding-top: 15px;
+    padding: 15px 0;
 }
 
-
+/* Second section, where card are located main section of the web page */
 .card-distribution {
     display: flex;
     flex-wrap: wrap;
@@ -92,6 +105,7 @@ hr {
     align-items: center;
 }
 
+/* Images for cards */
 #card-html {
     background: url('https://videohive.img.customer.envatousercontent.com/files/edf58567-0c1d-412c-9df8-c58505a7114f/inline_image_preview.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=d3246af46de46ab85e1579240ce7656f');
     background-size: cover;
@@ -109,6 +123,7 @@ hr {
     background-position: center;
 }
 
+/* Card figure */
 .card {
     border: 5px solid var(--border-color);
     border-radius: 20px;
@@ -117,14 +132,7 @@ hr {
     width: 400px;
 }
 
-.card-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    margin-top: -48%;
-}
-
+/* Headings inside cards, title to information after clicking the card */
 h3 {
     color: black;
     font-size: 150%;
@@ -136,6 +144,7 @@ h3 {
     box-shadow: inset 0 0 10px black;
 }
 
+/* To make cards react by hovering and make them bigger after focusing */
 a:hover > .card {
     box-shadow: inset 0px 0px 100px black;
 }
@@ -147,52 +156,63 @@ a:hover > .card > h3 {
 a:focus > .card{
     transform: scale(1.20);
 }
-/*
-footer {
-    width: 50%;
-    background-color: var(--inside-bg-color);
-    display: flex;
-    justify-content: center;
-    font-size: large;
-    margin-left: 25%;
-    margin-top:5%;
-    border-radius: 15px;
-    box-shadow: inset 0 0 10px #92A8D1;
-    flex: 1 1 auto;
-} */
 
+/* Division to contain all information on footer */
 .footer-container {
-    width: 50%;
+    margin-top: 5%;
+    width: 100%;
     background-color: var(--inside-bg-color);
     display: flex;
-    margin-left: 25%;
     flex-wrap: wrap;
-    flex: 1 1 500px;
+    flex: 1 1 auto;
     flex-direction: column;
     align-items: center;
+    border-radius: 10px;
 }
 
+/* Heading Contact Me */
 h4 {
-    font-size: 150%;
+    font-size: 125%;
 }
 
+/* List of all contact buttons */
 .footer-ul {
     display:flex;
     justify-content: space-around;
-    margin-right: 10%;
+    margin-right: 5%;
     list-style: none;
     flex: 1 1 auto;
 }
 
 .footer-ul > li {
-    margin: 10px 10px;
+    margin: 0 10px;
     font-size: 16px;
     list-style: none;
     font-weight: bold;
 }
 
-  @media screen and (min-width: 992px) {
+/* To display the web page according to screen size */
+@media screen and (min-width: 668px) {
+    
+    .footer-container {
+        width: 100%;
+        flex: 1 1 auto;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
     header, .card-distribution, .footer-container {
         flex-direction: row;
+    }
+
+    .footer-container > h4 {
+        display: flex;
+        margin-left: 30%;
+    }
+
+    .footer-container > ul{
+        justify-content: center;
+        flex: 0 1 400px;
     }
   }
