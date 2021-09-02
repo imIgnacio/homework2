@@ -12,7 +12,11 @@ The web page has a header, where a navbar is located to find all links.
 It also contains cards, where my projects are linked. And the footer whrere the contact me section is, including
 email, phone, Linkedin and Github.
 
-![plot](./assets/images/hw2-screenshot1.png)
+![alt text](https://github.com/imIgnacio/homework2/blob/main/assets/images/hm2-screenshot1.png)
+
+
+
+![alt text](https://github.com/imIgnacio/homework2/blob/main/assets/images/hm2-screenshot2.png)
 
 ## Link to the web page
 ### https://imignacio.github.io/homework2/
