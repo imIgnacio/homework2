@@ -126,6 +126,18 @@ hr {
     background-position: center;
 }
 
+#card-flightFinder {
+    background: url('https://www.gannett-cdn.com/presto/2019/06/23/USAT/c3a9f051-bd6c-4b39-b5b9-38244deec783-GettyImages-932651818.jpg?width=660&height=517&fit=crop&format=pjpg&auto=webp');
+    background-size: cover;
+    background-position: center;
+}
+
+#card-weather {
+    background: url('https://ichef.bbci.co.uk/images/ic/1200x675/p0617tch.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 /* Card figure */
 .card {
     border: 5px solid var(--border-color);
@@ -133,6 +145,8 @@ hr {
     flex: 0 1 400px;
     height: 300px;
     width: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /* Headings inside cards, title to information after clicking the card */
@@ -140,7 +154,7 @@ h3 {
     color: black;
     font-size: 150%;
     display: inline-block;
-    margin-top: 100px;
+    margin-top: 250px;
     background-color: var(--inside-bg-color);
     padding: 15px 20px 15px 20px;
     border-radius: 10px;
